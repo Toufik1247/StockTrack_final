@@ -21,7 +21,23 @@
             <div class="container mt-5">
                 <h1 class="text-center mb-4">Bienvenue sur la page d'accueil</h1>
 
-                <!-- Affichage des produits -->
+        <!-- Affichage des produits -->
+        <div class="row">
+            {% for produit in produits %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ produit.name }}</h5>
+                            <p class="card-text">{{ produit.description }}</p>
+                            <p class="card-text">Quantité : {{ produit.quantity }}</p>
+                            <p class="card-text">Prix : {{ produit.price }} €</p>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p>Aucun produit trouvé.</p>
+            {% endfor %}
+        </div>
 
                 <!-- Bouton vers le formulaire d'ajout de produit -->
                 <div class="text-center mt-4">
