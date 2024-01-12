@@ -17,9 +17,11 @@
     </head>
 
     <body>
+    {% include 'navbar/index.html.twig' %}
+
         {% block body %}
             <div class="container mt-5">
-                <h1 class="text-center mb-4">Bienvenue sur la page d'accueil</h1>
+                <h1 class="text-center mb-4">Liste de tous les produits</h1>
 
         <!-- Affichage des produits -->
         <div class="row">
@@ -38,11 +40,6 @@
                 <p>Aucun produit trouvé.</p>
             {% endfor %}
         </div>
-
-                <!-- Bouton vers le formulaire d'ajout de produit -->
-                <div class="text-center mt-4">
-                    <a href="{{ path('app_produits') }}" class="btn btn-primary">Ajouter un Produit</a>
-                </div>
             </div>
         {% endblock %}
     </body>

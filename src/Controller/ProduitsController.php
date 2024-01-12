@@ -28,7 +28,7 @@ class ProduitsController extends AbstractController
             // Message flash/toast
             $this->addFlash('success', 'Produit ajouté avec succès');
 
-            // Redirect to a different page, if necessary
+            // Redirection vers Homepage
             return $this->redirectToRoute('app_homepage');
         }
 
